@@ -1,7 +1,9 @@
-## Put comments here that give an overall description of what your
-## functions do
+##cachematrix can set and cache a matrix and its inverse matrix if there is one.
+##If no inverse matrix has been found, cachematrix can inverse the matrix by useing
+##solve() and cache the result.
 
-## Write a short comment describing this function
+##makeCacheMatrix can creat a list to set and get a matrix, set and get 
+##the inverse matrix of the first matrix.
 
 makeCacheMatrix <- function(x = matrix()) {
   inverse.matrix <- NULL
@@ -18,7 +20,9 @@ makeCacheMatrix <- function(x = matrix()) {
 }
 
 
-## Write a short comment describing this function
+##cacheSolve try to find out if there is a inverse matrix cached in makeCacheMatrix firstly. 
+##If it find one, cacheSolve return that matrix with the message "getting cached inverse matrix".
+##If not, cacheSolve will get the matrix cached in the makeCacheMatrix and inverse it useing solve().
 
 cacheSolve <- function(x, ...) {
   inverse.matrix <- x$getinverse()
